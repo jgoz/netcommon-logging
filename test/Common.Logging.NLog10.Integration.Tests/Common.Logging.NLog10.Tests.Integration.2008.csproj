@@ -2,13 +2,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{EE5CA38F-3F29-43E1-B385-03798EDDC765}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Common</RootNamespace>
-    <AssemblyName>Common.Logging.NLog.Tests.Integration</AssemblyName>
+    <AssemblyName>Common.Logging.NLog10.Tests.Integration</AssemblyName>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
@@ -68,11 +68,11 @@
       <Project>{440D903A-D409-48FC-A6C4-3EE69CCD663B}</Project>
       <Name>Common.Logging.2008</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Common.Logging.NLog\Common.Logging.NLog.2008.csproj">
+    <ProjectReference Include="..\..\src\Common.Logging.NLog10\Common.Logging.NLog10.2008.csproj">
       <Project>{C3FAAF50-CA05-42A5-9616-B48C21643D03}</Project>
       <Name>Common.Logging.NLog.2008</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Common.Logging.NLog.Tests\Common.Logging.NLog.Tests.2008.csproj">
+    <ProjectReference Include="..\Common.Logging.NLog10.Tests\Common.Logging.NLog10.Tests.2008.csproj">
       <Project>{B4BB1353-924A-40F0-9AA5-A7C28AB68F69}</Project>
       <Name>Common.Logging.NLog.Tests.2008</Name>
     </ProjectReference>
@@ -108,7 +108,7 @@
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logging\NLog\" />
+    <Folder Include="Logging\NLog10\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
