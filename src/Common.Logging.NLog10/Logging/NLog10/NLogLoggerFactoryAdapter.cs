@@ -23,7 +23,7 @@ using System.IO;
 using System.Collections.Specialized;
 using Common.Logging.Factory;
 
-namespace Common.Logging.NLog
+namespace Common.Logging.NLog10
 {
     /// <summary>
     /// Concrete subclass of ILoggerFactoryAdapter specific to NLog 1.0.0.505.
