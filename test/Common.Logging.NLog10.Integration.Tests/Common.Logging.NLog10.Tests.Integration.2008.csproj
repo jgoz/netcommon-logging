@@ -34,7 +34,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\build\Common.Logging.NLog.Tests.Integration\Debug\</OutputPath>
+    <OutputPath>..\..\build\Common.Logging.NLog10.Tests.Integration\Debug\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -43,7 +43,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\build\VS.NET.2008\Common.Logging.NLog.Integration.Tests\Release\</OutputPath>
+    <OutputPath>..\..\..\build\VS.NET.2008\Common.Logging.NLog10.Integration.Tests\Release\</OutputPath>
     <DefineConstants>TRACE;NET_2_0</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -51,7 +51,7 @@
   <ItemGroup>
     <Reference Include="NLog, Version=1.0.0.505, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\NLog\net\2.0\NLog.dll</HintPath>
+      <HintPath>..\..\lib\NLog10\net\2.0\NLog.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.5.0.9015, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -70,11 +70,11 @@
     </ProjectReference>
     <ProjectReference Include="..\..\src\Common.Logging.NLog10\Common.Logging.NLog10.2008.csproj">
       <Project>{C3FAAF50-CA05-42A5-9616-B48C21643D03}</Project>
-      <Name>Common.Logging.NLog.2008</Name>
+      <Name>Common.Logging.NLog10.2008</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common.Logging.NLog10.Tests\Common.Logging.NLog10.Tests.2008.csproj">
       <Project>{B4BB1353-924A-40F0-9AA5-A7C28AB68F69}</Project>
-      <Name>Common.Logging.NLog.Tests.2008</Name>
+      <Name>Common.Logging.NLog10.Tests.2008</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
