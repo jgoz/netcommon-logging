@@ -27,6 +27,7 @@ using NLog;
 using NLog.Config;
 using NLog.Targets;
 using NUnit.Framework;
+using global::NLog.Layouts;
 using LogLevel=NLog.LogLevel;
 using LogManager=NLog.LogManager;
 
@@ -35,6 +36,18 @@ namespace Common.Logger.NLog
     [TestFixture]
     public class NLogLoggerFactoryAdapterTests : ILogTestsBase
     {
+        private class TestLoggingConfigurationWithStacktrace : LoggingConfiguration
+        {
+            public readonly TestTarget Target;
+
+            public TestLoggingConfigurationWithStacktrace()
+            {
+                Target = new TestTarget();
+                Target.Layout = Layout.FromString("${stackTrace}");
+                LoggingRules.Add(new LoggingRule("*", LogLevel.Trace, Target));
+            }
+        }
+
         private class TestLoggingConfiguration : LoggingConfiguration
         {
             public readonly TestTarget Target;
@@ -42,25 +55,18 @@ namespace Common.Logger.NLog
             public TestLoggingConfiguration()
             {
                 Target = new TestTarget();
+                Target.Layout = Layout.FromString("${message}");
                 LoggingRules.Add(new LoggingRule("*", LogLevel.Trace, Target));
             }
         }
 
-        private sealed class TestTarget : Target
+        private sealed class TestTarget : TargetWithLayout
         {
             public LogEventInfo LastLogEvent;
             protected override void Write(LogEventInfo logEvent)
             {
                 LastLogEvent = logEvent;
             }
-        }
-
-        [SetUp]
-        public override void SetUp()
-        {
-            TestLoggingConfiguration cfg = new TestLoggingConfiguration();
-            LogManager.Configuration = cfg;
-            base.SetUp();
         }
 
         /// <summary>
@@ -81,9 +87,9 @@ namespace Common.Logger.NLog
         }
 
         [Test]
-        public void LogsUserStackFrame()
+        public void LogsUserStackFrameIfStackTraceRendererIsUsed()
         {
-            TestLoggingConfiguration cfg = new TestLoggingConfiguration();
+            TestLoggingConfigurationWithStacktrace cfg = new TestLoggingConfigurationWithStacktrace();
             LogManager.Configuration = cfg;
 
             Common.Logging.LogManager.Adapter = new NLogLoggerFactoryAdapter(null);
@@ -92,6 +98,20 @@ namespace Common.Logger.NLog
             Assert.IsNotNull(cfg.Target.LastLogEvent);
             string stackTrace = cfg.Target.LastLogEvent.StackTrace.ToString();
             Assert.AreSame(MethodBase.GetCurrentMethod(), cfg.Target.LastLogEvent.UserStackFrame.GetMethod());
+        }
+
+        [Test]
+        public void DoesNotLogStackFrameIfStackTraceRendererNotUsed()
+        {
+            TestLoggingConfiguration cfg = new TestLoggingConfiguration();
+            LogManager.Configuration = cfg;
+
+            Common.Logging.LogManager.Adapter = new NLogLoggerFactoryAdapter(null);
+            Common.Logging.LogManager.GetLogger("myLogger").Debug("TestMessage");
+
+            Assert.IsNotNull(cfg.Target.LastLogEvent);
+            Assert.IsFalse(cfg.Target.LastLogEvent.HasStackTrace);
+            Assert.IsNull(cfg.Target.LastLogEvent.StackTrace);
         }
     }
 }

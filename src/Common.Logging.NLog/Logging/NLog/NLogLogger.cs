@@ -23,6 +23,10 @@ using System.Diagnostics;
 using System.Reflection;
 using Common.Logging.Factory;
 using NLog;
+using global::NLog.Config;
+using global::NLog.LayoutRenderers;
+using global::NLog.Layouts;
+using global::NLog.Targets;
 using LogLevelNLog = NLog.LogLevel;
 using LoggerNLog = NLog.Logger;
 
@@ -49,6 +53,7 @@ namespace Common.Logging.NLog
         #region Fields
 
         private readonly LoggerNLog _logger;
+        private readonly bool _usesStackTrace;
         private readonly static Type declaringType = typeof(AbstractLogger);
 
         #endregion
@@ -59,6 +64,32 @@ namespace Common.Logging.NLog
         protected internal NLogLogger(LoggerNLog logger)
         {
             _logger = logger;
+            _usesStackTrace = GetStackTraceUsageFromConfig(logger.Factory.Configuration);
+        }
+
+        private static bool GetStackTraceUsageFromConfig(LoggingConfiguration configuration)
+        {
+            // TODO: Is there a better/more reliable way to do this?
+
+            foreach (Target target in configuration.AllTargets)
+            {
+                if (!(target is TargetWithLayout))
+                    continue;
+
+                TargetWithLayout targetWithLayout = (TargetWithLayout)target;
+                if (!(targetWithLayout.Layout is SimpleLayout))
+                    continue;
+
+                SimpleLayout layout = (SimpleLayout)targetWithLayout.Layout;
+
+                foreach (LayoutRenderer renderer in layout.Renderers)
+                {
+                    if (renderer is StackTraceLayoutRenderer)
+                        return true;
+                }
+            }
+
+            return false;
         }
 
         #region ILog Members
@@ -143,9 +174,11 @@ namespace Common.Logging.NLog
             LogLevelNLog level = GetLevel(logLevel);
             LogEventInfo logEvent = new LogEventInfo(level, _logger.Name, null, "{0}", new object[] { message }, exception);
 
-            // TODO: Can we somehow determine whether stack traces should be used?
-            StackTrace stackTrace = new StackTrace(StackTraceSkipMethods, false);
-            logEvent.SetStackTrace(stackTrace, FindCallingMethodOnStackTrace(stackTrace, GetType()));
+            if (_usesStackTrace)
+            {
+                StackTrace stackTrace = new StackTrace(StackTraceSkipMethods, false);
+                logEvent.SetStackTrace(stackTrace, FindCallingMethodOnStackTrace(stackTrace, GetType()));
+            }
 
             _logger.Log(declaringType, logEvent);
         }
