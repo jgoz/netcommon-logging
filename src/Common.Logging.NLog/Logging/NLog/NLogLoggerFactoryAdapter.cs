@@ -26,7 +26,7 @@ using Common.Logging.Factory;
 namespace Common.Logging.NLog
 {
     /// <summary>
-    /// Concrete subclass of ILoggerFactoryAdapter specific to NLog 2.0.0.0.
+    /// Concrete subclass of ILoggerFactoryAdapter specific to NLog 2.0.0.2000.
     /// </summary>
     /// <remarks>
     /// <para>Note, that you cannot use NLog in medium trust environments unless you use an unsigned build</para>
@@ -42,7 +42,7 @@ namespace Common.Logging.NLog
     /// </list>
     /// </remarks>
     /// <example>
-    /// The following snippet shows how to configure EntLib logging for Common.Logging:
+    /// The following snippet shows how to configure NLog logging for Common.Logging:
     /// <code>
     /// &lt;configuration&gt;
     ///   &lt;configSections&gt;

@@ -29,7 +29,7 @@ using LoggerNLog = NLog.Logger;
 namespace Common.Logging.NLog
 {
     /// <summary>
-    /// Concrete implementation of <see cref="ILog"/> interface specific to NLog 2.0.0.0.
+    /// Concrete implementation of <see cref="ILog"/> interface specific to NLog 2.0.0.2000.
     /// </summary>
     /// <remarks>
     /// NLog is a .NET logging library designed with simplicity and flexibility in mind.

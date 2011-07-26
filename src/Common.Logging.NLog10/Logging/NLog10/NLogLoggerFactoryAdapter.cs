@@ -42,7 +42,7 @@ namespace Common.Logging.NLog10
     /// </list>
     /// </remarks>
     /// <example>
-    /// The following snippet shows how to configure EntLib logging for Common.Logging:
+    /// The following snippet shows how to configure NLog logging for Common.Logging:
     /// <code>
     /// &lt;configuration&gt;
     ///   &lt;configSections&gt;
@@ -50,7 +50,7 @@ namespace Common.Logging.NLog10
     ///   &lt;/configSections&gt;
     ///   &lt;common&gt;
     ///     &lt;logging&gt;
-    ///       &lt;factoryAdapter type=&quot;Common.Logging.NLog.NLogLoggerFactoryAdapter, Common.Logging.NLog&quot;&gt;
+    ///       &lt;factoryAdapter type=&quot;Common.Logging.NLog10.NLogLoggerFactoryAdapter, Common.Logging.NLog&quot;&gt;
     ///         &lt;arg key=&quot;configType&quot; value=&quot;FILE&quot; /&gt;
     ///         &lt;arg key=&quot;configFile&quot; value=&quot;~/nlog.config&quot; /&gt;
     ///       &lt;/factoryAdapter&gt;
