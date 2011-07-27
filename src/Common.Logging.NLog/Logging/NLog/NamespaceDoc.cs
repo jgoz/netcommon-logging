@@ -18,7 +18,7 @@
 
 #endregion
 
-namespace Common.Logging.NLog10
+namespace Common.Logging.NLog
 {
     /// <summary>
     /// <para>This namespace contains the implementations to plug NLog 1.0.0.505 into Common.Logging.</para>

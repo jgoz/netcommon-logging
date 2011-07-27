@@ -48,7 +48,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Log4Net.2008
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Log4Net129.2008", "src\Common.Logging.Log4Net129\Common.Logging.Log4Net129.2008.csproj", "{A6A7257A-D1AE-4A09-8C1C-F55E099C8A8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog10.2008", "src\Common.Logging.NLog10\Common.Logging.NLog10.2008.csproj", "{C3FAAF50-CA05-42A5-9616-B48C21643D03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog.2008", "src\Common.Logging.NLog\Common.Logging.NLog.2008.csproj", "{C3FAAF50-CA05-42A5-9616-B48C21643D03}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Tests.2008", "test\Common.Logging.Tests\Common.Logging.Tests.2008.csproj", "{94E4E1B4-D424-4EB9-BF34-2EE8CC3D7048}"
 EndProject
@@ -72,9 +72,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Log4Net129.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Log4Net129.Tests.Integration.2008", "test\Common.Logging.Log4Net129.Integration.Tests\Common.Logging.Log4Net129.Tests.Integration.2008.csproj", "{F8F786C4-6B20-4E71-9693-6BF367ED6AA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog10.Tests.2008", "test\Common.Logging.NLog10.Tests\Common.Logging.NLog10.Tests.2008.csproj", "{B4BB1353-924A-40F0-9AA5-A7C28AB68F69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog.Tests.2008", "test\Common.Logging.NLog.Tests\Common.Logging.NLog.Tests.2008.csproj", "{B4BB1353-924A-40F0-9AA5-A7C28AB68F69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog10.Tests.Integration.2008", "test\Common.Logging.NLog10.Integration.Tests\Common.Logging.NLog10.Tests.Integration.2008.csproj", "{EE5CA38F-3F29-43E1-B385-03798EDDC765}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog.Tests.Integration.2008", "test\Common.Logging.NLog.Integration.Tests\Common.Logging.NLog.Tests.Integration.2008.csproj", "{EE5CA38F-3F29-43E1-B385-03798EDDC765}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Tests.BinaryCompatibility.2008", "test\Common.Logging.BinaryCompatibility.Tests\Common.Logging.Tests.BinaryCompatibility.2008.csproj", "{E641F51F-1B51-4B94-B419-A902EABCE4D4}"
 EndProject

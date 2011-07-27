@@ -25,7 +25,7 @@ using NLog;
 using LogLevelNLog = NLog.LogLevel;
 using LoggerNLog = NLog.Logger;
 
-namespace Common.Logging.NLog10
+namespace Common.Logging.NLog
 {
     /// <summary>
     /// Concrete implementation of <see cref="ILog"/> interface specific to NLog 1.0.0.505.

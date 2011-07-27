@@ -21,7 +21,7 @@
 using System.Reflection;
 using System.Security;
 using Common.Logging;
-using Common.Logging.NLog10;
+using Common.Logging.NLog;
 using Common.TestUtil;
 using NLog;
 using NLog.Config;
@@ -29,7 +29,7 @@ using NUnit.Framework;
 using LogLevel=NLog.LogLevel;
 using LogManager=NLog.LogManager;
 
-namespace Common.Logger.NLog10
+namespace Common.Logger.NLog
 {
     [TestFixture]
     public class NLogLoggerFactoryAdapterTests : ILogTestsBase

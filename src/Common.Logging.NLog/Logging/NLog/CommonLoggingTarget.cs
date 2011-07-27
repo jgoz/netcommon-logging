@@ -24,7 +24,7 @@ using System.Configuration;
 using Common.Logging.Configuration;
 using NLog;
 
-namespace Common.Logging.NLog10
+namespace Common.Logging.NLog
 {
     /// <summary>
     /// Routes all log events logged through NLog into the Common.Logging infrastructure.
