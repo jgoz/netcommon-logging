@@ -30,7 +30,7 @@ using global::NLog.Targets;
 using LogLevelNLog = NLog.LogLevel;
 using LoggerNLog = NLog.Logger;
 
-namespace Common.Logging.NLog
+namespace Common.Logging.NLog20
 {
     /// <summary>
     /// Concrete implementation of <see cref="ILog"/> interface specific to NLog 2.0.0.2000.

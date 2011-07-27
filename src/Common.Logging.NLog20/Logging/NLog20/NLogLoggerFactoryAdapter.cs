@@ -23,7 +23,7 @@ using System.IO;
 using System.Collections.Specialized;
 using Common.Logging.Factory;
 
-namespace Common.Logging.NLog
+namespace Common.Logging.NLog20
 {
     /// <summary>
     /// Concrete subclass of ILoggerFactoryAdapter specific to NLog 2.0.0.2000.
@@ -50,7 +50,7 @@ namespace Common.Logging.NLog
     ///   &lt;/configSections&gt;
     ///   &lt;common&gt;
     ///     &lt;logging&gt;
-    ///       &lt;factoryAdapter type=&quot;Common.Logging.NLog.NLogLoggerFactoryAdapter, Common.Logging.NLog&quot;&gt;
+    ///       &lt;factoryAdapter type=&quot;Common.Logging.NLog20.NLogLoggerFactoryAdapter, Common.Logging.NLog20&quot;&gt;
     ///         &lt;arg key=&quot;configType&quot; value=&quot;FILE&quot; /&gt;
     ///         &lt;arg key=&quot;configFile&quot; value=&quot;~/nlog.config&quot; /&gt;
     ///       &lt;/factoryAdapter&gt;

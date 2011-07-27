@@ -80,11 +80,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Tests.Binary
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.TestUtils", "test\Common.Logging.TestUtils\Common.Logging.TestUtils.csproj", "{F5193CD8-B431-48ED-B101-D8DBEF766140}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog.2008", "src\Common.Logging.NLog\Common.Logging.NLog.2008.csproj", "{741CA989-467F-4B5B-BF83-3132ADF14DE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog20.2008", "src\Common.Logging.NLog20\Common.Logging.NLog20.2008.csproj", "{741CA989-467F-4B5B-BF83-3132ADF14DE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog.Tests.2008", "test\Common.Logging.NLog.Tests\Common.Logging.NLog.Tests.2008.csproj", "{D55303E1-27C2-4C76-A197-52AC5645E730}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog20.Tests.2008", "test\Common.Logging.NLog20.Tests\Common.Logging.NLog20.Tests.2008.csproj", "{D55303E1-27C2-4C76-A197-52AC5645E730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog.Tests.Integration.2008", "test\Common.Logging.NLog.Integration.Tests\Common.Logging.NLog.Tests.Integration.2008.csproj", "{98A90A92-6314-422F-872D-D592DD4A4F47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog20.Tests.Integration.2008", "test\Common.Logging.NLog20.Integration.Tests\Common.Logging.NLog20.Tests.Integration.2008.csproj", "{98A90A92-6314-422F-872D-D592DD4A4F47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -18,7 +18,7 @@
 
 #endregion
 
-using Common.Logging.NLog;
+using Common.Logging.NLog20;
 
 /// <summary>
 /// <para>This assembly contains the implementations to plug NLog 2.0.0.2000 into Common.Logging.</para>

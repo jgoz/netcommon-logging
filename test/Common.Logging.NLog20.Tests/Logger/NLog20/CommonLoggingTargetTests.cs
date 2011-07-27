@@ -19,7 +19,7 @@
 #endregion
 
 using System;
-using Common.Logging.NLog;
+using Common.Logging.NLog20;
 using Common.Logging.Simple;
 using NLog.Config;
 using NUnit.Framework;
@@ -27,7 +27,7 @@ using LogLevel=NLog.LogLevel;
 using LogManager = Common.Logging.LogManager;
 using NLogLogManager = NLog.LogManager;
 
-namespace Common.Logger.NLog
+namespace Common.Logger.NLog20
 {
     /// <summary>
     /// </summary>

@@ -21,7 +21,7 @@
 using System.Reflection;
 using System.Security;
 using Common.Logging;
-using Common.Logging.NLog;
+using Common.Logging.NLog20;
 using Common.TestUtil;
 using NLog;
 using NLog.Config;
@@ -31,7 +31,7 @@ using global::NLog.Layouts;
 using LogLevel=NLog.LogLevel;
 using LogManager=NLog.LogManager;
 
-namespace Common.Logger.NLog
+namespace Common.Logger.NLog20
 {
     [TestFixture]
     public class NLogLoggerFactoryAdapterTests : ILogTestsBase

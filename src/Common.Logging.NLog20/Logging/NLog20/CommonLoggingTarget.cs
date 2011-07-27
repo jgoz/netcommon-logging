@@ -25,7 +25,7 @@ using Common.Logging.Configuration;
 using NLog;
 using NLog.Targets;
 
-namespace Common.Logging.NLog
+namespace Common.Logging.NLog20
 {
     /// <summary>
     /// Routes all log events logged through NLog into the Common.Logging infrastructure.
